@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<style>
+    .container-404 {
+        text-align: center;
+        margin-top: 50px;
+    }
+    .container-404 h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+    .container-404 iframe {
+        margin-top: 20px;
+    }
+    .btn-home {
+        margin-top: 30px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-404">
+    <h1>Sorry, this is not the page you're looking for.</h1>
+    <iframe src="https://giphy.com/embed/8L0Pky6C83SzkzU55a"
+            width="480"
+            height="480"
+            frameBorder="0"
+            class="giphy-embed"
+            allowFullScreen></iframe>
+    <div>
+        <a href="{{ url_for('homepage') }}" class="btn btn-primary btn-home">Go to Homepage</a>
+    </div>
+</div>
+{% endblock %}
